@@ -6,6 +6,4 @@ a = float(input("Enter the coefficient a: "))
 b = float(input("Enter the coefficient b: "))
 c = float(input("Enter the coefficient c: "))
 
-discriminant = calculate_discriminant(a, b, c)
-
-print(f"The discriminant (D) is: {discriminant}")
+print(calculate_discriminant(a, b, c))
