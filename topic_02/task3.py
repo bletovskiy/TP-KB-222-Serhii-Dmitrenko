@@ -12,18 +12,28 @@ def divide(a, b):
         return "Division by zero is not allowed"
     return a / b
 
-a, b = map(float, input("Enter number 'a' and 'b' (separated by spaces): ").split())
-operation = input("Enter operation (+, -, *, /): ")
+while True:
+    print(f"Add = '+'")
+    print(f"Substract = '-'")
+    print(f"Multiply = '*'")
+    print(f"Divide = '/'")
+    print(f"Exit = ']'")
+    operation = input("Enter operation : ")
 
-match operation:
-    case "+":
-         print(add(a, b))
-    case "-":
-         print(substract(a, b))
-    case "*":
-         print(multiply(a, b))
-    case "/":
-         print(divide(a, b))
-    case _:
-         print("Invalid operation")
+    if operation == "]":
+        break
+
+    a, b = map(float, input("Enter number 'a' and 'b' (separated by spaces): ").split())
+    
+    match operation:
+        case "+":
+            print(add(a, b))
+        case "-":
+            print(substract(a, b))
+        case "*":
+            print(multiply(a, b))
+        case "/":
+            print(divide(a, b))
+        case _:
+            print("Invalid operation")
 
