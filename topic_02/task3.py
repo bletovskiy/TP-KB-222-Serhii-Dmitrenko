@@ -27,13 +27,13 @@ while True:
     
     match operation:
         case "+":
-            print(add(a, b))
+            print(f"Result: {add(a, b)}\n")
         case "-":
-            print(substract(a, b))
+            print(f"Result: {substract(a, b)}\n")
         case "*":
-            print(multiply(a, b))
+            print(f"Result: {multiply(a, b)}\n")
         case "/":
-            print(divide(a, b))
+            print(f"Result: {divide(a, b)}\n")
         case _:
             print("Invalid operation")
 
