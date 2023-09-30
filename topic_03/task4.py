@@ -1,11 +1,17 @@
-list = ["a", "bb", "ccc", "dddd"]
-new_value = input("New value: ") 
-index_to_insert = len(list)
-for i in range(len(list)):
-    if new_value < list[i]:
-        index_to_insert = 1
+list = ["e", "j", "p"]
+
+while True:
+    new_value = input("New value (or 'quit' to exit): ")
+    
+    if new_value == 'quit':
         break
 
-list.insert(index_to_insert, new_value)
+    insert_index = 0
 
-print("Результат: ", list)
+    for elem in list:
+        if new_value > elem:
+            insert_index += 1
+
+    list.insert(insert_index, new_value)
+
+    print("Result:", list)
