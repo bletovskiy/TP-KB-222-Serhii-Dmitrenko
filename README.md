@@ -11,6 +11,6 @@ Add folder topic_03
 Add solution for task1 task2 task3 and task4
 
 # 2023-09-30
-Update lpr
+Update lpr, update task4
 
 # TP-KB-222-Serhii-Dmitrenko
