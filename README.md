@@ -13,7 +13,7 @@ Add solution for task1 task2 task3 and task4
 # 2023-09-30
 Update lpr, update task4
 
-# 2023-10-3
+# 2023-10-03
  Add folder lab_01
  Add solution for lab1
 
