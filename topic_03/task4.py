@@ -14,4 +14,4 @@ while True:
 
     list.insert(insert_index, new_value)
 
-    print("Result:", list)
+    print("Result:", list) 
