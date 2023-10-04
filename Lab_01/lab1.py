@@ -1,98 +1,81 @@
-import random
-
 list = [
-    {"id": "00001", "name": "Bob", "phone": "0631234567", "age": "20", "email": "bob@example.com"},
-    {"id": "00002", "name": "Emma", "phone": "0631234568", "age": "22", "email": "emma@example.com"},
-    {"id": "00003", "name": "Jon", "phone": "0631234569", "age": "21", "email": "jon@example.com"},
-    {"id": "00004", "name": "Zak", "phone": "0631234570", "age": "19", "email": "zak@example.com"}
+    {"name": "Bob", "phone": "0631234567", "age": "20", "email": "bob@example.com"},
+    {"name": "Emma", "phone": "0631234567", "age": "22", "email": "emma@example.com"},
+    {"name": "Jon", "phone": "0631234567", "age": "21", "email": "jon@example.com"},
+    {"name": "Zak", "phone": "0631234567", "age": "19", "email": "zak@example.com"}
 ]
 
 def printAllList():
     for elem in list:
-        StrForPrint = "  Student ID: "+ elem["id"] +"  Student name: " +elem["name"] + "  Phone Number: " + elem["phone"] + "  Age: " + elem["age"] + "  Email: " + elem["email"]
-        print(StrForPrint)
-    return
-
-def generateUniqueId():
-    while True:
-        unique_id = str(random.randint(10000, 99999))
-
-        if not any(elem["id"] == unique_id for elem in list):
-            return unique_id
+        strForPrint = (
+            f"Student name is {elem['name']}, Phone is {elem['phone']}, Age is {elem['age']}, Email is {elem['email']}"
+        )
+        print(strForPrint)
 
 def addNewElement():
     name = input("Please enter student name: ")
     phone = input("Please enter student phone: ")
-    age = input("Please enter student age: ")
+    age = (input("Please enter student age: "))
     email = input("Please enter student email: ")
+    newItem = {"name": name, "phone": phone, "age": age, "email": email}
     
-    unique_id = generateUniqueId()
-    
-    newItem = {"id": unique_id, "name": name, "phone": phone, "age": age, "email": email}
-    
-    list.append(newItem)
+    insertPosition = 0
+    for elem in list:
+        if name > elem["name"]:
+            insertPosition += 1
+        else:
+            break
+    list.insert(insertPosition, newItem)
     print("New element has been added")
 
 def deleteElement():
-    id_to_delete = input("Please enter the ID of the student to be deleted: ")
-    found = False
-
+    name = input("Please enter name to be deleted: ")
+    deletePosition = -1
     for elem in list:
-        if elem.get("id") == id_to_delete:
-            list.remove(elem)
-            print("Student with ID '{}' has been deleted.".format(id_to_delete))
-            found = True
+        if name == elem["name"]:
+            deletePosition = list.index(elem)
             break
-
-    if not found:
-        print("Student with ID '{}' was not found.".format(id_to_delete))
+    if deletePosition == -1:
+        print("Element was not found")
+    else:
+        del list[deletePosition]
+        print("Element has been deleted")
 
 def updateElement():
-    id_to_update = input("Please enter the ID of the student to be updated: ")
-    found = False
-
+    name = input("Please enter name to be updated: ")
     for elem in list:
-        if elem.get("id") == id_to_update:
-            print("Student found. Enter updated information:")
-            new_name = input("New name: ")
-            new_phone = input("New phone: ")
-            new_age = input("New age: ")
-            new_mail = input("New Email: ")
-
-            elem["name"] = new_name
-            elem["phone"] = new_phone
-            elem["age"] = new_age
-            elem["email"] = new_mail
-
-            print("Student information updated.")
-            found = True
+        if name == elem["name"]:
+            elem["phone"] = input("Please enter new phone number: ")
+            elem["age"] = int(input("Please enter new age: "))
+            elem["email"] = input("Please enter new email: ")
+            print("Element has been updated")
             break
-
-    if not found:
-        print("Student with ID '{}' was not found.".format(id_to_update))
+    else:
+        print("Element not found")
 
 def main():
     while True:
-        choice = input("Please specify the action [C create, U update, D delete, P print, X exit]: ")
-        
-        if choice in ["C", "c"]:
+        choice = input("Please specify the action [C create, U update, D delete, P print, X exit]: ").lower()
+        if choice == "c":
             print("New element will be created:")
             addNewElement()
             printAllList()
-        elif choice in ["U", "u"]:
-            print("Existing element will be updated")
+        elif choice == "u":
+            print("Existing element will be updated:")
             updateElement()
             printAllList()
-        elif choice in ["D", "d"]:
-            print("Element will be deleted")
+        elif choice == "d":
+            print("Element will be deleted:")
             deleteElement()
             printAllList()
-        elif choice in ["P", "p"]:
-            print("List will be printed")
+        elif choice == "p":
+            print("List will be printed:")
             printAllList()
-        elif choice in ["X", "x"]:
+        elif choice == "x":
+            print("Exit()")
             break
         else:
             print("Wrong choice")
 
-main()
+if __name__ == "__main__":
+    main()
