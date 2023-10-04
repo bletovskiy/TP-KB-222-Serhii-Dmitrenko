@@ -42,12 +42,21 @@ def deleteElement():
 
 def updateElement():
     name = input("Please enter name to be updated: ")
-    for elem in list:
+    for index, elem in enumerate(list):
         if name == elem["name"]:
-            elem["name"] = input("Please enter new name: ")
-            elem["phone"] = input("Please enter new phone number: ")
-            elem["age"] = input("Please enter new age: ")
-            elem["email"] = input("Please enter new email: ")
+            new_name = input("Please enter new name: ")
+            new_phone = input("Please enter new phone number: ")
+            new_age = input("Please enter new age: ")
+            new_email = input("Please enter new email: ")
+            updated_item = {"name": new_name, "phone": new_phone, "age": new_age, "email": new_email}
+            del list[index]
+            insertPosition = 0
+            for pos, elem in enumerate(list):
+                if new_name > elem["name"]:
+                    insertPosition = pos + 1
+                else:
+                    break
+            list.insert(insertPosition, updated_item)
             print("Element has been updated")
             break
     else:
