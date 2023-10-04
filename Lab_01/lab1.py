@@ -7,9 +7,9 @@ list = [
 
 def printAllList():
     for elem in list:
-        strForPrint = (f"Student name is {elem['name']}, Phone is {elem['phone']}, Age is {elem['age']}, Email is {elem['email']}")
-        print(strForPrint)
-    return 
+        StrForPrint ="  Student name: " +elem["name"] + "  Phone Number: " + elem["phone"] + "  Age: " + elem["age"] + "  Email: " + elem["email"]
+        print(StrForPrint)
+    return
 
 def addNewElement():
     name = input("Please enter student name: ")
