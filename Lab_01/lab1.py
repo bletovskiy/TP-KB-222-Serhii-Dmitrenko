@@ -7,10 +7,9 @@ list = [
 
 def printAllList():
     for elem in list:
-        strForPrint = (
-            f"Student name is {elem['name']}, Phone is {elem['phone']}, Age is {elem['age']}, Email is {elem['email']}"
-        )
+        strForPrint = (f"Student name is {elem['name']}, Phone is {elem['phone']}, Age is {elem['age']}, Email is {elem['email']}")
         print(strForPrint)
+    return 
 
 def addNewElement():
     name = input("Please enter student name: ")
@@ -18,7 +17,7 @@ def addNewElement():
     age = (input("Please enter student age: "))
     email = input("Please enter student email: ")
     newItem = {"name": name, "phone": phone, "age": age, "email": email}
-    
+
     insertPosition = 0
     for elem in list:
         if name > elem["name"]:
