@@ -44,8 +44,9 @@ def updateElement():
     name = input("Please enter name to be updated: ")
     for elem in list:
         if name == elem["name"]:
+            elem["name"] = input("Please enter new name: ")
             elem["phone"] = input("Please enter new phone number: ")
-            elem["age"] = int(input("Please enter new age: "))
+            elem["age"] = input("Please enter new age: ")
             elem["email"] = input("Please enter new email: ")
             print("Element has been updated")
             break
