@@ -30,7 +30,7 @@ def getOperation(valid_operations):
         else:
             print("Invalid operation. Please enter a valid operation.")
 
-valid_operations = ['+', '-', '*', '/', 'Q']
+valid_operations = ['+', '-', '*', '/', 'Q', 'q']
 
 while True:
     print("Add = '+' \nSubtract = '-'\nMultiply = '*'\nDivide = '/'\nExit = 'Q' or 'q'")
