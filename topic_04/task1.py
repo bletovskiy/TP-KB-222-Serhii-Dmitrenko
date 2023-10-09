@@ -30,15 +30,16 @@ def getOperation(valid_operations):
         else:
             print("Invalid operation. Please enter a valid operation.")
 
-valid_operations = ['+', '-', '*', '/']
+valid_operations = ['+', '-', '*', '/', 'Q']
 
 while True:
     print("Add = '+' \nSubtract = '-'\nMultiply = '*'\nDivide = '/'\nExit = 'Q' or 'q'")
-    operation = input("Enter operation : ")
+    
+    operation = getOperation(valid_operations)
 
     if operation == "Q" or operation == "q":
         break
-    elif operation in valid_operations:
+    else:
         a = getInt("Enter number 'a': ")
         b = getInt("Enter number 'b': ")
         
@@ -51,5 +52,3 @@ while True:
                 print(f"Result: {multiply(a, b)}\n")
             case "/":
                 print(f"Result: {divide(a, b)}\n")
-    else:
-        print("Invalid operation. Please enter +, -, *, or /.\n")
