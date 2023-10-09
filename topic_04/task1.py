@@ -12,8 +12,8 @@ def divide(a, b):
         if b == 0:
             raise ZeroDivisionError("Division by zero is not allowed")
         return a / b
-    except ZeroDivisionError as e:
-        return str(e)
+    except ZeroDivisionError as exc:
+        return str(exc)
 
 def getInt(prompt):
     while True:
@@ -28,10 +28,10 @@ while True:
     print(f"Subtract = '-'")
     print(f"Multiply = '*'")
     print(f"Divide = '/'")
-    print(f"Exit = 'Q'")
+    print(f"Exit = 'Q' or 'q'")
     operation = input("Enter operation: ")
 
-    if operation == "Q":
+    if operation == "Q" or "q":
         break
 
     a = getInt("Enter number 'a': ")
@@ -53,5 +53,5 @@ while True:
         if result is not None:
             print(f"Result: {result}\n")
 
-    except (ValueError, TypeError) as e:
-        print(f"Error: {e}")
+    except (ValueError, TypeError) as exc:
+        print(f"Error: {exc}")
