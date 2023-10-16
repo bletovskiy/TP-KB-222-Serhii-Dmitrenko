@@ -24,4 +24,7 @@ add solution for task1
 # 2023-10-09
 Update solution for task1 in topic_04
 
+# 2023-10-16
+Update solution for topic_05
+
 # TP-KB-222-Serhii-Dmitrenko
