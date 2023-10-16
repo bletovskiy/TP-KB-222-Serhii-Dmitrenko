@@ -2,30 +2,17 @@ import random
 
 options = ["stone", "scissors", "paper"]
 
-while True:
-    userChoice = input("Your choice 'stone', 'scissors', 'paper': ").strip().lower()
-    
-    if userChoice not in options:
-        print("Invalid choice.")
-    else:
-        break
+while (userChoice := input("Your choice 'stone', 'scissors', 'paper': ").strip().lower()) not in options:
+    print("Invalid choice.")
 
 compChoice = random.choice(options)
 
 print(f"Your choice: {userChoice}")
 print(f"Computer choice: {compChoice}")
 
-results = {
-    ("stone", "scissors"): "You win!",
-    ("scissors", "paper"): "You win!",
-    ("paper", "stone"): "You win!",
-    ("scissors", "stone"): "Computer wins!",
-    ("paper", "scissors"): "Computer wins!",
-    ("stone", "paper"): "Computer wins!",
-}
+results = {("stone", "scissors"): "You win!", 
+           ("scissors", "paper"): "You win!", 
+           ("paper", "stone"): "You win!"}
 
-if userChoice == compChoice:
-    print("Tie")
-else:
-    result = results.get((userChoice, compChoice))
-    print(result)
+result = "Tie" if userChoice == compChoice else results.get((userChoice, compChoice), "Computer wins!")
+print(result)
