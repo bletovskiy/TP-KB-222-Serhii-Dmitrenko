@@ -1,0 +1,17 @@
+2023-10-25 11:02:47: Operation: +, a: 1, b: 1, Result: 2
+2023-10-25 11:02:50: Operation: -, a: 23, b: 3, Result: 20
+2023-10-25 11:02:56: Operation: *, a: 22, b: 10, Result: 220
+2023-10-25 11:03:01: Operation: /, a: 12, b: 2, Result: 6.0
+2023-10-25 11:03:04: Operation: /, a: 12, b: 0, Result: Division by zero is not allowed
+2023-10-25 11:03:17: Operation: +, a: 1, b: 22, Result: 23
+2023-10-25 11:03:19: Operation: Invalid operation, a: s, b: s, Result: Invalid input
+2023-10-25 11:03:21: Operation: Invalid operation, a: 1, b: 1, Result: Invalid input
+2023-10-25 11:08:54: Operation: Invalid input, a: , b: , Result: Invalid input. Please enter a valid integer.
+2023-10-25 11:09:24: Operation: +, a: 1, b: 1, Result: 2
+2023-10-25 11:09:28: Operation: -, a: 2, b: 2, Result: 0
+2023-10-25 11:09:34: Operation: *, a: 23, b: 10, Result: 230
+2023-10-25 11:09:42: Operation: /, a: 12, b: 2, Result: 6.0
+2023-10-25 11:09:43: Operation: Invalid operation, a: Null, b: Null, Result: Invalid input
+2023-10-25 11:09:52: Operation: /, a: 12, b: 0, Result: Division by zero is not allowed
+2023-10-25 11:09:59: Operation: Invalid operation, a: Null, b: Null, Result: Invalid input
+2023-10-25 11:10:06: Operation: Invalid input, a: , b: , Result: Invalid input. Please enter a valid integer.
