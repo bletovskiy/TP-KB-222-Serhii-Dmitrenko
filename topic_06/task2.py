@@ -10,10 +10,9 @@ with open("student.txt", "r") as file:
             students.append({'Name': name, 'Mark': int(mark)})
     
 sortName = sorted(students, key=getName)
-sortMark = sorted(students, key=getMark)
-
 for student in sortName:
     print(f"{student['Name']}, {student['Mark']}")
 
+sortMark = sorted(students, key=getMark)
 for student in sortMark:
     print(f"{student['Name']}, {student['Mark']}")
