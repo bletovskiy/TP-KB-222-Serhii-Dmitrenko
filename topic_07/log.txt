@@ -1,0 +1,6 @@
+2023-11-01 14:19:00: Operation: +, a: 1, b: 2, Result: 3
+2023-11-01 14:19:07: Operation: -, a: 23, b: 3, Result: 20
+2023-11-01 14:19:12: Operation: *, a: 12, b: 2, Result: 24
+2023-11-01 14:19:18: Operation: /, a: 12, b: 2, Result: 6.0
+2023-11-01 14:19:22: Operation: Invalid input, a: , b: , Result: Invalid input. Please enter a valid integer.
+2023-11-01 14:19:24: Operation: /, a: 2, b: 0, Result: Division by zero is not allowed
