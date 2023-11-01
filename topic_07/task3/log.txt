@@ -4,3 +4,8 @@
 2023-11-01 14:19:18: Operation: /, a: 12, b: 2, Result: 6.0
 2023-11-01 14:19:22: Operation: Invalid input, a: , b: , Result: Invalid input. Please enter a valid integer.
 2023-11-01 14:19:24: Operation: /, a: 2, b: 0, Result: Division by zero is not allowed
+2023-11-01 14:26:45: Operation: +, a: 12, b: 2, Result: 14
+2023-11-01 14:26:50: Operation: -, a: 12, b: 22, Result: -10
+2023-11-01 14:26:56: Operation: *, a: 12, b: 12, Result: 144
+2023-11-01 14:26:59: Operation: /, a: 12, b: 2, Result: 6.0
+2023-11-01 14:27:02: Operation: /, a: 2, b: 0, Result: Division by zero is not allowed

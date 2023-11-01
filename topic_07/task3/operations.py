@@ -1,6 +1,6 @@
 from functions import calculatorFunctions
 
-class CalculatorOperations:
+class calculatorOperations:
     def __init__(self):
         self.valid_operations = ['+', '-', '*', '/', 'Q', 'q']
         self.functions = calculatorFunctions()
