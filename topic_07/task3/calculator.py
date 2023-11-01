@@ -3,12 +3,12 @@ from operations import calculatorOperations
 while True:
     print("Add = '+' \nSubtract = '-'\nMultiply = '*'\nDivide = '/'\nExit = 'Q' or 'q")
     
-    operation = input("Enter operation: ")
-    
+    calculator = calculatorOperations()
+    operation = calculator.getValidOperation()
+
     if operation in ["Q", "q"]:
         break
-    
-    calculator = calculatorOperations()
+
     a = calculator.getInt("Enter number 'a': ")
     b = calculator.getInt("Enter number 'b': ")
     

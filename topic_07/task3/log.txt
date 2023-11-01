@@ -8,4 +8,12 @@
 2023-11-01 14:26:50: Operation: -, a: 12, b: 22, Result: -10
 2023-11-01 14:26:56: Operation: *, a: 12, b: 12, Result: 144
 2023-11-01 14:26:59: Operation: /, a: 12, b: 2, Result: 6.0
-2023-11-01 14:27:02: Operation: /, a: 2, b: 0, Result: Division by zero is not allowed
+2023-11-01 14:27:02: Operation: /, a: 2, b: 0, Result: Division by zero is not allowed2023-11-01 22:56:44: Operation: 1, a: 1, b: 1, Result: None
+2023-11-01 22:57:21: Operation: Invalid operation, a: Null, b: Null, Result: Invalid input
+2023-11-01 22:57:22: Operation: Invalid operation, a: Null, b: Null, Result: Invalid input
+2023-11-01 22:57:23: Operation: Invalid operation, a: Null, b: Null, Result: Invalid input
+2023-11-01 22:57:24: Operation: Invalid operation, a: Null, b: Null, Result: Invalid input
+2023-11-01 22:57:24: Operation: Invalid operation, a: Null, b: Null, Result: Invalid input
+2023-11-01 22:57:25: Operation: Invalid operation, a: Null, b: Null, Result: Invalid input
+2023-11-01 22:57:26: Operation: Invalid operation, a: Null, b: Null, Result: Invalid input
+2023-11-01 22:57:35: Operation: +, a: 21, b: 2, Result: 23
