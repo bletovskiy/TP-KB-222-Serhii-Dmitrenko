@@ -70,19 +70,19 @@ def updateElement():
     name = input("Please enter name to be updated: ")
     for index, elem in enumerate(list):
         if name == elem["name"]:
-            new_name = input("Please enter new name: ")
-            new_phone = input("Please enter new phone number: ")
-            new_age = input("Please enter new age: ")
-            new_email = input("Please enter new email: ")
-            updated_item = {"name": new_name, "phone": new_phone, "age": new_age, "email": new_email}
+            newName = input("Please enter new name: ")
+            newPhone = input("Please enter new phone number: ")
+            newAge = input("Please enter new age: ")
+            newEmail = input("Please enter new email: ")
+            updatedItem = {"name": newName, "phone": newPhone, "age": newAge, "email": newEmail}
             del list[index]
             insertPosition = 0
             for pos, elem in enumerate(list):
-                if new_name > elem["name"]:
+                if newName > elem["name"]:
                     insertPosition = pos + 1
                 else:
                     break
-            list.insert(insertPosition, updated_item)
+            list.insert(insertPosition, updatedItem)
             print("Element has been updated")
             break
     else:
