@@ -15,7 +15,7 @@ def add(file):
                 list.append(row)
         print("CSV file loaded succesfully")
     except FileNotFoundError:
-        print("File mot found")
+        print("File not found")
     except Exception as e:
         print(f"An error occurred: {e}")
 
