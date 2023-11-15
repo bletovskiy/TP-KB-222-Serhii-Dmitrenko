@@ -1,11 +1,7 @@
 import csv
+import sys
 
-list = [
-    {"name": "Bob", "phone": "0631234567", "age": "20", "email": "bob@example.com"},
-    {"name": "Emma", "phone": "0631234567", "age": "22", "email": "emma@example.com"},
-    {"name": "Jon", "phone": "0631234567", "age": "21", "email": "jon@example.com"},
-    {"name": "Zak", "phone": "0631234567", "age": "19", "email": "zak@example.com"}
-]
+list = []
 
 def add(file):
     try:
@@ -89,6 +85,13 @@ def updateElement():
         print("Element not found")
 
 def main():
+    if len(sys.argv) != 2:
+        print("Usage: python script.py <file_name.csv>")
+        sys.exit(1)
+    
+    file = sys.argv[1]
+    list = add(file)
+    
     while True:
         choice = input("Please specify the action \nC - Create \nU - Update \nD - Delete \nP - Print \nX - Exit \nL - Load \nS - Save \n   Enter: ")
         match choice:
