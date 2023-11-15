@@ -1,0 +1,8 @@
+name,phone,age,email
+Bob,0631234567,20,bob@example.com
+Emma,0631234567,22,emma@example.com
+Jon,0631234567,21,jon@example.com
+Zak,0631234567,19,zak@example.com
+Bob,1112233,22,Bobik@mail.com
+Dilan,2223344,44,Dilan@mail.com
+Zak,3334455,54,zak@mail.com
