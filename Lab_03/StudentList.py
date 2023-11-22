@@ -1,4 +1,3 @@
-import unittest
 from Student import Student 
 
 class StudentList:
@@ -28,6 +27,3 @@ class StudentList:
 
     def sortStudents(self):
         self.students.sort(key=lambda student: student.name)
-
-if __name__ == '__main__':
-    unittest.main()
