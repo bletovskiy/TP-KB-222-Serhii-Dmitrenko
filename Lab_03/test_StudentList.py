@@ -1,31 +1,49 @@
 import unittest
-from StudentList import StudentList
 from Student import Student
+from StudentList import StudentList
 
-class TestStudentList(unittest.TestCase):
+class TestStudentListMethods(unittest.TestCase):
+
     def setUp(self):
-        self.student_list = StudentList()
+        self.studentList = StudentList()
+        self.student1 = Student("Bob", "123-456-7890", 20, "bob@example.com")
+        self.student2 = Student("Derek", "987-654-3210", 22, "derek@example.com")
 
-    def test_add_student(self):
-        student = Student("John Doe", "123456789", 20, "john.doe@example.com")
-        self.student_list.addStudent(student)
-        self.assertIn(student, self.student_list.students)
+    def test_addStudent(self):
+        self.studentList.addStudent(self.student1)
+        self.assertEqual(len(self.studentList.students), 1)
+        self.assertEqual(self.studentList.students[0].name, "Bob")
 
-    def test_delete_student(self):
-        student = Student("John Doe", "123456789", 20, "john.doe@example.com")
-        self.student_list.addStudent(student)
-        self.student_list.deleteStudent("John Doe")
-        self.assertNotIn(student, self.student_list.students)
+        self.studentList.addStudent(self.student2)
+        self.assertEqual(len(self.studentList.students), 2)
+        self.assertEqual(self.studentList.students[1].name, "Derek")
 
-    def test_update_student(self):
-        student = Student("John Doe", "123456789", 20, "john.doe@example.com")
-        self.student_list.addStudent(student)
-        self.student_list.updateStudent("John Doe", "Jane Doe", 21, "987654321", "jane.doe@example.com")
-        updated_student = self.student_list.students[0]
-        self.assertEqual(updated_student.name, "Jane Doe")
-        self.assertEqual(updated_student.age, 21)
-        self.assertEqual(updated_student.phone, "987654321")
-        self.assertEqual(updated_student.email, "jane.doe@example.com")
+    def test_DeleteStudent(self):
+        self.studentList.addStudent(self.student1)
+        self.studentList.addStudent(self.student2)
+
+        self.studentList.deleteStudent("Bob")
+        self.assertEqual(len(self.studentList.students), 1)
+        self.assertEqual(self.studentList.students[0].name, "Derek")
+
+        self.studentList.deleteStudent("Alice")
+        self.assertEqual(len(self.studentList.students), 1)
+
+    def test_UpdateStudent(self):
+        self.studentList.addStudent(self.student1)
+        self.studentList.addStudent(self.student2)
+
+        newStudent = Student("Bob", "999-999-9999", 21, "bob@example.com")
+        self.studentList.updateStudent("Bob", newStudent)
+
+        self.assertEqual(len(self.studentList.students), 2)
+        self.assertEqual(self.studentList.students[0].phone, "999-999-9999")
+        self.assertEqual(self.studentList.students[0].email, "bob@example.com")
+
+        nonExistingStudent = Student("Alice", "111-111-1111", 25, "alice@example.com")
+        self.studentList.updateStudent("Alice", nonExistingStudent)
+
+        self.assertEqual(len(self.studentList.students), 2)
 
 if __name__ == '__main__':
     unittest.main()

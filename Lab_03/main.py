@@ -11,7 +11,6 @@ def main():
                 print("New element will be created:")
                 student = Student(input("Enter name: "), input("Enter phone: "), input("Enter age: "), input("Enter email: "))
                 studentList.addStudent(student)
-                studentList.printAllStudents()
             case "u":
                 print("Existing element will be updated")
                 name = input("Enter student name to update: ")
@@ -22,7 +21,7 @@ def main():
                 studentList.deleteStudent(name)
             case "p":
                 print("List will be printed")
-                studentList.printAllStudents()
+                print(studentList)
             case "x":
                 print("Leaving...")
                 break
