@@ -33,8 +33,8 @@ def getRpn(input):
             continue
 
         if token in operations:
-            op_priority = getOper(token)
-            while stack and stack[-1] in operations and getOper(stack[-1]) >= op_priority:
+            opPriority = getOper(token)
+            while stack and stack[-1] in operations and getOper(stack[-1]) >= opPriority:
                 output.append(stack.pop())
             stack.append(token)
 
@@ -70,8 +70,8 @@ def calcRpn(rpn):
     return stack
 
 if __name__ == '__main__':
-    input_expr = '22 / 11 + 23 * 2 * ( 24 / 2 ) ^ 2'
-    rpn_expr = getRpn(input_expr)
+    input = '22 / 11 + 23 * 2 * ( 24 / 2 ) ^ 2'
+    rpn = getRpn(input)
     
-    print("Reverse Polish Notation (RPN):", rpn_expr)
-    print("Result:", calcRpn(rpn_expr))
+    print("Reverse Polish Notation (RPN):", rpn)
+    print("Result:", calcRpn(rpn))
