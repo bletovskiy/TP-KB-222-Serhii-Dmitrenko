@@ -33,4 +33,15 @@ add solution for topic_07
  Add folder lab_01
  Add solution for lab1
 
+ # 2023-11-19
+ Add folder lab_02
+ Add solution for lab2
+
+ # 2023-11-23
+ Add folder lab_03
+ Add solution for lab3
+
+  # 2023-11-29
+ Add folder lab_04
+ Add solution for lab4
 # TP-KB-222-Serhii-Dmitrenko
