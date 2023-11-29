@@ -29,7 +29,7 @@ def getRpn(input):
         if token == ')':
             while stack and stack[-1] != '(':
                 output.append(stack.pop())
-            stack.pop()  # Remove the '(' from the stack
+            stack.pop()
             continue
 
         if token in operations:
