@@ -70,7 +70,7 @@ def calcRpn(rpn):
     return stack
 
 if __name__ == '__main__':
-    input = '22 / 11 + 23 * 2 * ( 24 / 2 ) ^ 2'
+    input = '48 / 4 + 156 * 24 * ( 24 / 2 ) ^ 2'
     rpn = getRpn(input)
     
     print("Reverse Polish Notation (RPN):", rpn)
